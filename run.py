@@ -8,8 +8,8 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 # Get environment variables
 api_key     = os.environ.get('p9xlE9TCFzgenwMcekmwwXI8b7YdMZ0T2FI4yqYU17RqbeXonUVQul54G9t3Qj2r')
 api_secret  = os.environ.get('IsXznVY5tJnkpy7mD7LFHbSUiPyuGXRol7qG7E3geKeqYXhk6yQ7nMpNAbOfJS9U')
-client      = Client(api_key, api_secret)
-
+client      = Client(api_key, api_secret,  testnet=True)
+client.API_URL = 'https://testnet.binance.vision/api'
 # Value from config.py
 live_trade = config.live_trade
 base = config.base
@@ -51,7 +51,7 @@ def buy_low_sell_high():
 
         # Computing for Trade Quantity
         current_holding = round(asset_balance * asset_price, my_round_off)
-        change_percent  = round(((current_holding - my_core_number) / my_core_number * 100), 4)
+        change_percent  = round(((current_holding - my_core_number) / my_core_number * 100), 10)
         trade_amount    = round(abs(current_holding - my_core_number), my_round_off)
 
         # Output Console and Placing Order

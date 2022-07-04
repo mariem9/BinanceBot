@@ -1,0 +1,1 @@
+Bot de trading "buy_low_sell_hight

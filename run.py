@@ -6,9 +6,9 @@ from binance.exceptions import BinanceAPIException
 from apscheduler.schedulers.blocking import BlockingScheduler
 
 # Get environment variables
-api_key     = os.environ.get('p9xlE9TCFzgenwMcekmwwXI8b7YdMZ0T2FI4yqYU17RqbeXonUVQul54G9t3Qj2r')
-api_secret  = os.environ.get('IsXznVY5tJnkpy7mD7LFHbSUiPyuGXRol7qG7E3geKeqYXhk6yQ7nMpNAbOfJS9U')
-client      = Client(api_key, api_secret,  testnet=True)
+api_key     = 'p9xlE9TCFzgenwMcekmwwXI8b7YdMZ0T2FI4yqYU17RqbeXonUVQul54G9t3Qj2r'
+api_secret  = 'IsXznVY5tJnkpy7mD7LFHbSUiPyuGXRol7qG7E3geKeqYXhk6yQ7nMpNAbOfJS9U'
+client      = Client(api_key, api_secret, testnet=True)
 client.API_URL = 'https://testnet.binance.vision/api'
 # Value from config.py
 live_trade = config.live_trade

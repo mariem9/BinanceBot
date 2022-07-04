@@ -51,7 +51,7 @@ for i in range(len(pair)):
 
     # Computing for Trade Quantity
     current_holding = round(asset_balance * asset_price, my_round_off)
-    change_percent  = round(((current_holding - my_core_number) / my_core_number * 100), 4)
+    change_percent  = round(((current_holding - my_core_number) / my_core_number * 100), 10)
     trade_amount    = round(abs(current_holding - my_core_number), my_round_off)
 
     # Output Console and Placing Order

@@ -1,0 +1,6 @@
+[!] Created at : 04-07-2022 @ 19:56:14
+APIError(code=-1021): Timestamp for this request is outside of the recvWindow.
+
+[!] Created at : 04-07-2022 @ 20:02:19
+APIError(code=-1021): Timestamp for this request is outside of the recvWindow.
+
